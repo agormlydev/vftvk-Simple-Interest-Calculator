@@ -3,7 +3,7 @@
     <head>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Simple Interest Calculator</title>
+    <title>Web App - Simple Interest Calculator</title>
     </head>
     <body>
         <div id="main_div">
@@ -14,15 +14,15 @@
                     <input type="number" class="main_div_body_col_1" id="principal">
                 </div>
                 <div id="rate_wrapper">
-                    <span class="main_div_body_col_0">Rate</span> 
+                    <span class="main_div_body_col_0">Interest Rate</span> 
                     <input type="range" id="rate" min="1" max="20"
-                           step=".25" value="10.25" onchange="updateRate()"
+                           step=".25" value="10.25" oninput="updateRate()"
                            class="main_div_body_col_1">
-                    <span id="rate_val">10.25%</span>
+                    <span id="rate_val" class="main_div_body_col_2">10.25%</span>
                 </div>
                 <div id="years_wrapper">
                     <span class="main_div_body_col_0">No. of Years</span>
-                    <select id="years">
+                    <select id="years" class="main_div_body_col_1">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -35,11 +35,11 @@
                         <option value="10">10</option>
                     </select>
                 </div>
-                <button onclick="compute()">Compute Interest</button>
-                <div id="result"></div>
+                <button class="main_div_body_col_0" onclick="compute()">Compute Interest</button>
+                <div id="result" class="main_div_body_col_0"></div>
             </div>
             <footer>
-                &#169; This Calculator belongs to Andrew Gormly
+                &#169;This Calculator belongs to Andrew Gormly
             </footer>
         </div>
     </body>
